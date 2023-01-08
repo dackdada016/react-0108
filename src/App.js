@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 function App() {
-  // 宣告狀態用的語法 [得到狀態, 設定狀態] = 初始值
+  // 宣告狀態用的語法 [得到狀態, 設定狀態] = 使用狀態(初始值)
   const [total, setTotal] = useState(0)
   return (
     <>
