@@ -1,11 +1,11 @@
 // import Counter from './0109/1-counter/Counter'
 // import JSXValue from './0109/2-JSXValue/JSXValue'
 // import JSXValue2 from './0109/3.jsx/JSXValue2'
-import Student from './0109/4-2.map/data/Student'
+import ProductTable from './0109/5.練習題-陣列-map/ProductTable'
 function App() {
   return (
     <>
-      <Student />
+      <ProductTable />
     </>
   )
 }
