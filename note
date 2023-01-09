@@ -1,6 +1,10 @@
 標籤 <br> <hr> <img> <input> 都要加上closs符號封閉 ->  <br/> <hr/> <img/> <input/> 否則位會成為致命錯誤
 react JSX 語法內 HTML標籤為小寫
+
 自訂元件則是需要以大寫命名(大駝峰式命名)，否則會無法辨認為自訂元件
+
 style屬性要使用物件的方法撰寫
 EX: <div style="width:16rem"></div> -> error 
   需要寫成這樣 <div style={{width:16rem}}></div>
+可以用 import 引入樣式到要使用的元件
+優點: 減少開發時的錯誤 缺點:失去生成動態CSS樣式
