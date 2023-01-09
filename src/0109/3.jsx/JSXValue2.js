@@ -15,10 +15,24 @@ function JSXValue2() {
       {/* 樣板字串的語法 */}
       {`total = ${100 - 5}`}
 
-      {/* render時不會呈現boolean值 */}
+      {/* render時不會呈現*/}
       <h2>Boolean</h2>
       {true}
       {false}
+      <h2>null</h2>
+      {null}
+      <h2>undefined</h2>
+      {undefined}
+
+      <h2>Array</h2>
+      {['a', 'b', 'c', 123]}
+
+      <h2>Object</h2>
+      {/* 會造成錯誤中斷，不能直接呈現物件 */}
+      {/* {{ a: 1, b: 2 }} */}
+      <h2>Function</h2>
+      {/* 會警告錯誤，不會呈現任何東西 */}
+      {() => {}}
     </>
   )
 }
