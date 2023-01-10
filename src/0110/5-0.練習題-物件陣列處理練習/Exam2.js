@@ -1,4 +1,3 @@
-import log from 'eslint-plugin-react/lib/util/log'
 import { useState } from 'react'
 import './Exam2.css'
 
@@ -130,7 +129,7 @@ function Exam2() {
       <button
         onClick={() => {
           // 條件不等於B的才進入新陣列
-          setData(data.filter((v) => v.text != 'b'))
+          setData(data.filter((v) => v.text !== 'b'))
         }}
       >
         刪除文字為b的物件資料
