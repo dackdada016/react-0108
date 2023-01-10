@@ -1,8 +1,8 @@
-function ChildA(prop) {
+function ChildA(props) {
   return (
     <>
       <h1>ChildA</h1>
-      <p>來自父元件的資料: {prop.pData}</p>
+      <p>來自子元件B的資料: {props.dataFromChid}</p>
     </>
   )
 }
