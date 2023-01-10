@@ -11,7 +11,7 @@ function Parent() {
   return (
     <>
       <h1>Parent</h1>
-
+      {/* 給子元件A可以得到state的props */}
       <ChildA dataFromChid={dataFromChid} />
       {/* 給子元件B可以設定state的函式 */}
       <ChildB setDataFromChild={setDataFromChild} />
