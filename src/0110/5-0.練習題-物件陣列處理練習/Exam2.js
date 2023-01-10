@@ -1,3 +1,4 @@
+import log from 'eslint-plugin-react/lib/util/log'
 import { useState } from 'react'
 import './Exam2.css'
 
@@ -143,9 +144,68 @@ function Exam2() {
         刪除id為4的物件資料
       </button>
       <br />
-      <button onClick={() => {}}>在id為2後面插入id為5與文字為bbb的物件</button>
+      <button
+        onClick={() => {
+          // 先找到ID為2的物件索引值
+          const index = data.findIndex((v, i) => v.id === 2)
+          console.log(data.slice(0, index + 1), data.slice(index + 1))
+
+          // 如果有找到 分割陣列成兩個部分
+          // 加入新物件 合併陣列
+
+          if (index !== -1) {
+            const newObj = { id: 5, text: 'bbb' }
+            const newData = [
+              ...data.slice(0, index + 1),
+              newObj,
+              ...data.slice(index + 1),
+            ]
+            setData(newData)
+          }
+        }}
+      >
+        在id為2後面插入id為5與文字為bbb的物件
+      </button>
       <br />
-      <button onClick={() => {}}>取代id為3的文字為cccc</button>
+      <button
+        onClick={() => {
+          // 方法一
+          // // 1. 從目前的狀態拷貝(深拷貝)出一個新的變數值(陣列/物件)
+
+          // const newData = data.map((v, i) => {
+          //   // 拷貝每個物件(等同深拷貝)
+          //   return { ...v }
+          // })
+          // // 2. 在新的變數值(陣列/物件)上作處理
+
+          // const index = newData.findIndex((v, i) => v.id === 3)
+          // if (index !== -1) {
+          //   // 找到ID為3的物件後,修改文字物件更改
+          //   newData[index].text = 'cccc'
+          //   setData(newData)
+          // }
+          // 3. 設定回原本的狀態中
+
+          // 方法二
+          const newData = data.map((v, i) => {
+            if (v.id === 3) {
+              // 展開物件的時候，如果後面的屬性在原物件已經存在，會覆蓋原物件的屬性及屬性值
+              // 如果原物件不存在相同屬性，則會加入新的屬性
+              return { ...v, text: 'cccc' }
+            }
+          })
+          // 2. 在新的變數值(陣列/物件)上作處理
+
+          const index = newData.findIndex((v, i) => v.id === 3)
+          if (index !== -1) {
+            // 找到ID為3的物件後,修改文字物件更改
+            newData[index].text = 'cccc'
+            setData(newData)
+          }
+        }}
+      >
+        取代id為3的文字為cccc
+      </button>
     </>
   )
 }
