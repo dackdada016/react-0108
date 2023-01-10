@@ -1,4 +1,3 @@
-import react from 'eslint-plugin-import/config/react'
 import { useState } from 'react'
 import ChildA from './ChildA'
 import ChildB from './ChildB'
