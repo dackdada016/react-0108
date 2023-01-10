@@ -5,11 +5,12 @@
 // import Login from './0109/7.state/Login'
 
 // import Parent from './0110/3.props-2/Parent'
-import Menu from './0110/練習 選單點取/Menu'
+// import Menu from './0110/練習 選單點取/Menu'
+import Exam2 from './0110/5-0.練習題-物件陣列處理練習/Exam2'
 function App() {
   return (
     <>
-      <Menu />
+      <Exam2 />
       {/* <Login /> */}
     </>
   )
