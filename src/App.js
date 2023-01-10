@@ -4,12 +4,12 @@
 // import Counter from './0109/7.state/Counter'
 // import Login from './0109/7.state/Login'
 
-import Parent from './0110/3.props-2/Parent'
-
+// import Parent from './0110/3.props-2/Parent'
+import Menu from './0110/練習 選單點取/Menu'
 function App() {
   return (
     <>
-      <Parent />
+      <Menu />
       {/* <Login /> */}
     </>
   )
