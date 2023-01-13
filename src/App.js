@@ -7,11 +7,12 @@
 // import Parent from './0110/3.props-2/Parent'
 // import Menu from './0110/練習 選單點取/Menu'
 // import Exam2 from './0110/5-0.練習題-物件陣列處理練習/Exam2'
-import HTML5Form from './0113/HTML5Form/HTML5Form'
+// import HTML5Form from './0113/HTML5Form/HTML5Form'
+import Exchange from './0113/2-0.練習題-貨幣轉換/Exchange'
 function App() {
   return (
     <>
-      <HTML5Form />
+      <Exchange />
       {/* <Login /> */}
     </>
   )
