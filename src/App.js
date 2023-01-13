@@ -7,11 +7,11 @@
 // import Parent from './0110/3.props-2/Parent'
 // import Menu from './0110/練習 選單點取/Menu'
 // import Exam2 from './0110/5-0.練習題-物件陣列處理練習/Exam2'
-import ShoppingCart from './0110/6-1.練習題-小型購物車/ShoppingCart'
+import HTML5Form from './0113/HTML5Form/HTML5Form'
 function App() {
   return (
     <>
-      <ShoppingCart />
+      <HTML5Form />
       {/* <Login /> */}
     </>
   )
