@@ -8,11 +8,12 @@
 // import Menu from './0110/練習 選單點取/Menu'
 // import Exam2 from './0110/5-0.練習題-物件陣列處理練習/Exam2'
 // import HTML5Form from './0113/HTML5Form/HTML5Form'
-import Exchange from './0113/2-0.練習題-貨幣轉換/Exchange'
+// import Exchange from './0113/2-0.練習題-貨幣轉換/Exchange'
+import BMI from './0113/3-0.練習題-BMI計算器/BMI'
 function App() {
   return (
     <>
-      <Exchange />
+      <BMI />
       {/* <Login /> */}
     </>
   )
