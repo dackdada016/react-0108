@@ -10,7 +10,7 @@ function FC() {
   }, [])
   // ^^ 空陣列代表不與任何state或props相依，只在元件初次render時執行一次
 
-  //模擬didUpdate
+  //模擬didUpdate + didMount
   // 第一次render也會執行
   useEffect(() => {
     console.log('模擬componentDidMount+componentDidUpdate', 'total=', total)
