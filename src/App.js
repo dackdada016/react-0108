@@ -1,9 +1,9 @@
-import TodoApp from './0117/1.todo/TodoApp'
+import Main from './0117/2.lifecyde/Main'
 
 function App() {
   return (
     <>
-      <TodoApp />
+      <Main />
       {/* <Login /> */}
     </>
   )
