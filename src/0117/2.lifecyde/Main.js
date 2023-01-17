@@ -12,7 +12,8 @@ function Main() {
       >
         {show ? '移除' : '呈現'}
       </button>
-      <FC />
+      <hr />
+      {show && <FC />}
     </>
   )
 }

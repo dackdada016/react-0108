@@ -14,6 +14,7 @@ class CC extends React.Component {
   render() {
     return (
       <>
+        <h1>類別型元件</h1>
         <h1
           onClick={() => {
             this.setState({ total: this.state.total + 1 })
