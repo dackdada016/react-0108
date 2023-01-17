@@ -1,0 +1,29 @@
+.completed {
+  text-decoration: line-through;
+  color:gray;
+}
+
+.active {
+  color:green;
+  font-weight: bold;
+}
+div {
+  margin: 20px;
+}
+button{
+  margin-right: 5px;
+}
+.filter-button-normal
+{
+  
+  background-color: #e7e7e7;
+  color:black;
+  border: 1px black solid;
+  border-radius: 3px;
+}
+.filter-button-active{
+  background-color: #008CBA;
+  color:white;
+  border: 1px black solid;
+  border-radius: 3px;
+}
