@@ -8,8 +8,8 @@ import './TodoApp.css'
 
 function TodoApp() {
   const [todos, setTodos] = useState([
-    { id: 1, text: '買iphone', completed: false },
-    { id: 2, text: '學react', completed: true },
+    { id: 1, text: '買iphone', completed: false, editing: true },
+    { id: 2, text: '學react', completed: true, editing: false },
   ])
 
   // 切換 過濾目前呈現項目用選項，只有以下三種情況
@@ -45,6 +45,7 @@ function TodoApp() {
       id: Number(new Date()),
       text: text,
       completed: false, //預設為未完成
+      editing: false,
     }
 
     // 共通三步驟
@@ -100,6 +101,25 @@ function TodoApp() {
     // )
   }
 
+  // 傳入id作為editing屬性的布林值切換
+  // 其他非此id的項目的editing要設為false
+  const toggleEditing = (id) => {
+    const newTodos = todos.map((v, i) => {
+      // id一致的話切換editing的布林值
+      if ((id === v, id)) return { ...v, editing: !v.editing }
+      else return { ...v, editing: false }
+    })
+    setTodos(newTodos)
+  }
+
+  // 傳入id 然後將此項目的text屬性更改為傳入
+  const updateTodo = (id, text) => {
+    const newTodos = todos.map((v, i) => {
+      if (id === v.id) return { ...v, text: text, editing: false }
+      else return { ...v }
+    })
+    setTodos(newTodos)
+  }
   // 傳入id，刪除此項目
   const deleteTodo = (id) => {
     //1, 2
@@ -116,7 +136,7 @@ function TodoApp() {
 
   return (
     <>
-      <h1>待辨事項</h1>
+      <h1>待辦事項</h1>
       {/* 利用屬性(props)傳入 */}
       <AddForm addTodo={addTodo} />
       <hr />
@@ -125,6 +145,8 @@ function TodoApp() {
         todos={getFilterTodos(todos)}
         toggleCompleted={toggleCompleted}
         deleteTodo={deleteTodo}
+        toggleEditing={toggleEditing}
+        updateTodo={updateTodo}
       />
       <hr />
       <FilterButtonGroup filter={filter} setFilter={setFilter} />

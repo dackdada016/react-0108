@@ -1,10 +1,10 @@
-import React from 'react'
-
-function TodoItem({ todo, toggleCompleted, deleteTodo }) {
+function TodoItem({ todo, toggleCompleted, deleteTodo, toggleEditing }) {
+  // 可以先解構todo物件，方便在下面使用todo.id, todo.text...
   const { id, completed, text } = todo
+
   return (
     <>
-      <li key={id} className={completed ? 'completed' : 'active'}>
+      <li className={completed ? 'completed' : 'active'}>
         <input
           type="checkbox"
           checked={completed}
@@ -13,6 +13,13 @@ function TodoItem({ todo, toggleCompleted, deleteTodo }) {
           }}
         />
         {text}
+        <button
+          onClick={() => {
+            toggleEditing(id)
+          }}
+        >
+          編輯
+        </button>
         <button
           onClick={() => {
             deleteTodo(id)
